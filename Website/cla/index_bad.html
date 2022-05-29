@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>cla</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+   <style>
+      .sidebar {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: #111;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+      }
+
+      .sidebar a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #818181;
+         display: block;
+         transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+         color: #f1f1f1;
+      }
+
+      .sidebar .closebtn {
+         position: absolute;
+         top: 0;
+         right: 25px;
+         font-size: 36px;
+         margin-left: 50px;
+      }
+
+      .openbtn {
+         font-size: 20px;
+         cursor: pointer;
+         background-color: #111;
+         color: white;
+         padding: 10px 15px;
+         border: none;
+      }
+
+      .openbtn:hover {
+         background-color: #444;
+      }
+
+      #main {
+         transition: margin-left .5s;
+         padding: 16px;
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+         .sidebar {
+            padding-top: 15px;
+         }
+
+         .sidebar a {
+            font-size: 18px;
+         }
+      }
+   </style>
+</head>
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="header">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo">
+                           <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="about.html">About</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="product.html">Products</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           </li>
+                           <li class="nav-item d_none">
+                              <!-- <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><i class="fa fa-search" aria-hidden="true"></i></div> -->
+                              <!-- <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..."> -->
+                              <!-- <div id="main"><i class="fa fa-search" onclick="openNav()"></i></div> -->
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- end header inner -->
+   <!-- end header -->
+
+   <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+   <!-- Sidebar (hidden by default)
+   <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-right"
+      style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+      <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+      <a href="AboutUs.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+
+      <h2>Menu</h2>
+      <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search...">
+
+      <ul id="myMenu">
+         <li><a href="#">HTML</a></li>
+         <li><a href="#">CSS</a></li>
+         <li><a href="#">JavaScript</a></li>
+         <li><a href="#">PHP</a></li>
+         <li><a href="#">Python</a></li>
+         <li><a href="#">jQuery</a></li>
+         <li><a href="#">SQL</a></li>
+         <li><a href="#">Bootstrap</a></li>
+         <li><a href="#">Node.js</a></li>
+      </ul>
+   </nav> -->
+
+   <!-- banner -->
+   <section class="banner_main">
+      <div id="banner1" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#banner1" data-slide-to="0" class="active"></li>
+            <li data-target="#banner1" data-slide-to="1"></li>
+            <li data-target="#banner1" data-slide-to="2"></li>
+            <li data-target="#banner1" data-slide-to="3"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="text-bg">
+                              <span>???company name maybe??</span>
+                              <h1>Our Mission</h1>
+                              <p>By connecting consumers to secondhand technology that matches their needs, we aim to
+                                 reduce electronic waste. In the future, we hope to expand our horizons to include other
+                                 secondhand goods.</p>
+                              <a href="about.html">Read More</a> <a href="contact.html">Contact Us </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text_img">
+                              <figure><img src="images/pct.png" alt="#" /></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="text-bg">
+                              <span>Find Sustainable Deals</span>
+                              <h1>Laptops</h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                 suffered alteration in some form, by injected humour, or </p>
+                              <a href="laptop.html">Search Laptops </a> <a href="contact.html">Contact Us </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text_img">
+                              <figure><img src="images/pct.png" alt="#" /></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="text-bg">
+                              <span>Find Sustainable Deals</span>
+                              <h1>Tablets</h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                 suffered alteration in some form, by injected humour, or </p>
+                              <a href="tablet.html">Search Tablets </a> <a href="contact.html">Contact Us </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text_img">
+                              <figure><img src="images/pct.png" alt="#" /></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <div class="container">
+                  <div class="carousel-caption">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="text-bg">
+                              <span>Find Sustainable Deals</span>
+                              <h1>Smartphones</h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                                 suffered alteration in some form, by injected humour, or </p>
+                              <a href="smartphones.html">Search Smartphones </a> <a href="contact.html">Contact Us </a>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text_img">
+                              <figure><img src="images/pct.png" alt="#" /></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+         </a>
+         <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+         </a>
+      </div>
+   </section>
+   <!-- end banner -->
+   <!-- three_box -->
+   <div class="three_box">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>Our Products</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-4 margin_bottom1">
+               <div class="box_text">
+                  <i><img src="images/thr1.png" alt="#" /></i>
+                  <a href="laptop.html">
+                     <h3>Search Laptops</h3>
+                  </a>
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                     alteration in some form, by injected humour, or randomised words which don't look even slightly
+                     believable. </p>
+               </div>
+            </div>
+            <div class="col-md-4 margin_bottom1">
+               <div class="box_text">
+                  <i><img src="images/smartphone.png" alt="#" /></i>
+                  <a href="smartphones.html">
+                     <h3>Search Smartphones</h3>
+                  </a>
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                     alteration in some form, by injected humour, or randomised words which don't look even slightly
+                     believable. </p>
+               </div>
+            </div>
+            <div class="col-md-4 margin_bottom1">
+               <div class="box_text">
+                  <i><img src="images/thr2.png" alt="#" /></i>
+                  <a href="tablet.html">
+                     <h3>Search Tablets</h3>
+                  </a>
+                  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                     alteration in some form, by injected humour, or randomised words which don't look even slightly
+                     believable. </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- three_box -->
+   <!-- products -->
+   <!-- <div  class="products">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Products</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="our_products">
+                     <div class="row">
+                        <div class="col-md-4 margin_bottom1">
+                           <div class="product_box">
+                              <figure><img src="images/product1.png" alt="#"/></figure>
+                              <a href="laptop.html"><h3>Laptops</h3></a>
+                           </div>
+                        </div>
+                        <div class="col-md-4 margin_bottom1">
+                           <div class="product_box">
+                              <figure><img src="images/product2.png" alt="#"/></figure>
+                              <a href="smartphones.html"><h3>Smartphones</h3></a>
+                           </div>
+                        </div>
+                        <div class="col-md-4 margin_bottom1">
+                           <div class="product_box">
+                              <figure><img src="images/product3.png" alt="#"/></figure>
+                              <a href="tablet.html"><h3>Tablets</h3></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+   <!-- end products -->
+
+
+
+   <!--  footer -->
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img class="logo1" src="images/logo1.png" alt="#" />
+                  <ul class="social_icon">
+                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <a href="about.html">
+                     <h3>About Us</h3>
+                  </a>
+                  <ul class="about_us">
+                     <li>By connecting consumers to secondhand<br>
+                        technology that matches their needs, <br>
+                        we aim to reduce electronic waste. In <br>
+                        the future, we hope to expand our<br>
+                        horizons to include other secondhand<br>
+                        goods.
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <a href="contact.html">
+                     <h3>Contact Us</h3>
+                  </a>
+                  <ul class="conta">
+                     <li>Want to give us feedback? Do you know<br>
+                        of a store in your area offering <br>
+                        secondhand deals? Let us know and we'll<br>
+                        add the offers to our site!</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <!-- search sidebar-->
+   <script>
+      /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+      function openNav() {
+         document.getElementById("mySidebar").style.width = "250px";
+         document.getElementById("main").style.marginRight = "250px";
+      }
+
+      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+         document.getElementById("mySidebar").style.width = "0";
+         document.getElementById("main").style.marginRight = "0";
+      }
+   </script>
+
+   <script>
+      function myFunction() {
+         var input, filter, ul, li, a, i;
+         input = document.getElementById("mySearch");
+         filter = input.value.toUpperCase();
+         ul = document.getElementById("myMenu");
+         li = ul.getElementsByTagName("li");
+         for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+               li[i].style.display = "";
+            } else {
+               li[i].style.display = "none";
+            }
+         }
+      }
+   </script>
+</body>
+
+</html>
